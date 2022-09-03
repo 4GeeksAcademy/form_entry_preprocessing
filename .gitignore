@@ -1,0 +1,13 @@
+
+# DotEnv configuration
+.env
+
+# VS Code
+.vscode/
+
+# Jupyter NB Checkpoints
+.ipynb_checkpoints/
+
+# exclude data from source control by default
+/data/
+
