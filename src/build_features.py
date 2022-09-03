@@ -76,7 +76,7 @@ def clean_utm_medium(df,column):
     df[column] = np.where((df['utm_source'] == 'linkedin') & (df[column] == 'social') , 
                               'cpc', df[column])
 
-    df[column] = np.where((df['utm_source'] == 'linkedin') & (df['column] == 'Inmail') , 
+    df[column] = np.where((df['utm_source'] == 'linkedin') & (df[column] == 'Inmail') , 
                               'cpc', df[column])
     print(df[column].value_counts())
     return df      
