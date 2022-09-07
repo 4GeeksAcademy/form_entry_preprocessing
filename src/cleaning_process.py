@@ -48,7 +48,6 @@ data.insert(3, 'fullname', fourth_column)
 #drop null columns
 features.drop_null_columns(data)
 
-
 #drop irrelevant columns
 data.drop(TO_DROP, axis=1, inplace=True)
 
@@ -76,13 +75,16 @@ data = features.clean_language(data,'language')
 #clean utm_source
 
 data = features.assign_with_conditions(data)
-
 data = features.clean_utm_source(data,'utm_source')
 
 #clean utm_medium
 data = features.clean_utm_medium(data,'utm_medium')
 
-# Assign values
+#Assign values
 data = features.assign_lead_type(data, 'tags','lead_type')
 
 print(data.shape)
+
+data.to_csv('../data/processed/clean_form_entries.csv')
+
+print('Data saved in data/processed folder')
