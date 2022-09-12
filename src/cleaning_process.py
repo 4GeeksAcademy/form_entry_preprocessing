@@ -83,6 +83,8 @@ data = features.clean_utm_medium(data,'utm_medium')
 #Assign values
 data = features.assign_lead_type(data, 'tags','lead_type')
 
+data = data.set_index('email')
+
 print(data.shape)
 
 data.to_csv('../data/processed/clean_form_entries.csv')
